@@ -1,0 +1,12 @@
+[Unit]
+After=network.target
+Description=Template Bot
+
+[Service]
+Type=simple
+WorkingDirectory=/root/folder/
+ExecStart=/usr/bin/python3 bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
